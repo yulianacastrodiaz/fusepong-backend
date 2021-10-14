@@ -13,9 +13,6 @@ module.exports = (sequelize) => {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
-          isAlphanumeric: {
-            msg: "El nombre debe ser de tipo alfanumérico"
-          },
           notEmpty: {
             msg: "El nombre no debe estar vacío"
           },
@@ -26,28 +23,14 @@ module.exports = (sequelize) => {
         }
       },
       nit: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
         allowNull: false,
         unique: true,
-        len: {
-          args: [10],
-          msg: "El nit debe tener 10 dígitos"
-        },
-        isInt: {
-          msg: "El nit debe ser entero"
-        }
       },
       phone: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
         allowNull: false,
         unique: true,
-        len: {
-          args: [10],
-          msg: "El teléfono debe tener 10 dígitos"
-        },
-        isInt: {
-          msg: "El teléfono debe ser entero"
-        }
       },
       adress: {
         type: DataTypes.STRING,
