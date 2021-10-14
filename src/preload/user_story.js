@@ -11,7 +11,7 @@ function preloadUserStories() {
     title: 'Producto(catálogo)',
     description: '...ver la lista completa de productos (catálogo), para ver todo lo disponible para comprar.'
   }, {
-    title: "Definir los 10API's candidatas",
+    title: "Definir las 10API's candidatas",
     description: "Se debe obtener un listado con nombre y características de 10 API's para scraping de ofertas de trabajo."
   }, {
     title: 'Desarrollar experimentos preliminares con una API',
