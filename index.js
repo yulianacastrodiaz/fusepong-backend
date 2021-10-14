@@ -4,6 +4,9 @@ const preloadCompanies = require('./src/preload/company');
 const preloadProjects = require('./src/preload/project');
 const preloadTickets = require('./src/preload/ticket');
 const preloadUserStories = require('./src/preload/user_story');
+const presetProjects = require('./src/preset/project');
+const presetUserStories = require('./src/preset/user_story.js');
+const presetTickets = require('./src/preset/ticket');
 // Syncing all the models at once.
 const PORT = process.env.PORT || 3001
 const force = true;
@@ -20,6 +23,12 @@ try {
         console.log('Preload of userStories: done :)');
         const tickets = await preloadTickets();
         console.log('Preload of tickets: done :)');
+        const presProjects = await presetProjects();
+        console.log('Preset of projects: done :)');
+        const presUserStories = await presetUserStories();
+        console.log('Preset of userStories: done :)');
+        const presTickets = await presetTickets();
+        console.log('Preset of tickets: done :)');
       }
       server.listen(PORT, () => {
         console.log(`${PORT}`); // eslint-disable-line no-console
