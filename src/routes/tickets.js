@@ -46,7 +46,7 @@ try {
     const { newcomment, newstate, ticketId } = req.body;
     if (!ticketId) return res.status(404).json({ msg: 'Se necesita el id del ticket' });
     const ticket = await Ticket.findByPk(ticketId);
-    if (!ticket) return res.status(404).json({ msg: 'E id del ticket ingresado es inválido' });
+    if (!ticket) return res.status(404).json({ msg: 'El id del ticket ingresado es inválido' });
     if (newcomment) {
       ticket.comment = newcomment;
       await ticket.save();
